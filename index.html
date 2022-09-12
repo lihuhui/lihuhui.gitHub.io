@@ -152,6 +152,72 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-css制作的表情" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2022/09/12/css%E5%88%B6%E4%BD%9C%E7%9A%84%E8%A1%A8%E6%83%85/">前端【css制作表情】小练习</a>
+    </h1>
+  
+
+        
+        <a href="/2022/09/12/css%E5%88%B6%E4%BD%9C%E7%9A%84%E8%A1%A8%E6%83%85/" class="archive-article-date">
+  	<time datetime="2022-09-12T04:35:41.344Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2022-09-12</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>根据css样式来完成的表情小练习 通过js来完成眼睛随鼠标移动转动眼球</p>
+<h2 id="源码如下"><a href="#源码如下" class="headerlink" title="源码如下"></a>源码如下</h2><h3 id="直接创建一个-txt文件-将下面代码直接复制到文件里面-再将文件后缀改为。html-保存运行就可以实现效果"><a href="#直接创建一个-txt文件-将下面代码直接复制到文件里面-再将文件后缀改为。html-保存运行就可以实现效果" class="headerlink" title="直接创建一个.txt文件  将下面代码直接复制到文件里面 再将文件后缀改为。html 保存运行就可以实现效果"></a>直接创建一个.txt文件  将下面代码直接复制到文件里面 再将文件后缀改为。html 保存运行就可以实现效果</h3><p> <img src="/pic/biaoqin.png" alt="img"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br></pre></td><td class="code"><pre><span class="line"> &lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">&quot;en&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">&lt;<span class="built_in">head</span>&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><br><span class="line">    &lt;meta http-equiv=<span class="string">&quot;X-UA-Compatible&quot;</span> content=<span class="string">&quot;IE=edge&quot;</span>&gt;</span><br><span class="line">    &lt;meta name=<span class="string">&quot;viewport&quot;</span> content=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div <span class="built_in">id</span>=<span class="string">&quot;app&quot;</span>&gt;</span><br><span class="line">       &lt;div class=<span class="string">&quot;eyes&quot;</span>&gt;</span><br><span class="line">        &lt;div class=<span class="string">&quot;eye&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">        &lt;div class=<span class="string">&quot;eye&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">       &lt;/div&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">    &lt;script src=<span class="string">&quot;./vue.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line"></span><br><span class="line">document.querySelector(<span class="string">&quot;body&quot;</span>)</span><br><span class="line">.addEventListener(<span class="string">&quot;mousemove&quot;</span>,eyeball);</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">eyeball</span></span>()&#123;</span><br><span class="line">    var eye = document.querySelectorAll(<span class="string">&quot;.eye&quot;</span>)</span><br><span class="line">    eye.forEach(eye =&gt;&#123;</span><br><span class="line">        <span class="built_in">let</span> x = (eye.getBoundingClientRect().left) </span><br><span class="line">        + (eye.clientWidth/2);</span><br><span class="line">        <span class="built_in">let</span> y = (eye.getBoundingClientRect().top)+</span><br><span class="line">        (eye.clientHeight/2);</span><br><span class="line">        <span class="built_in">let</span> radian = Math.atan2(event.pageX-x,event.pageY-y);</span><br><span class="line">        <span class="built_in">let</span> rot = (radian * (180 / Math.PI)* -1)+270;</span><br><span class="line">        eye.style.transform = <span class="string">&quot;rotate(&quot;</span>+rot+<span class="string">&quot;deg)&quot;</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line"></span><br><span class="line">&lt;/html&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">*&#123;</span><br><span class="line">    margin: 0;</span><br><span class="line">    padding: 0;</span><br><span class="line">    box-sizing: border-box;</span><br><span class="line">&#125;</span><br><span class="line">body&#123;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">    min-height: 100vh;</span><br><span class="line">    background-color: <span class="comment">#5d3800;</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#app&#123;</span></span><br><span class="line">    position: relative;</span><br><span class="line">    background-color: <span class="comment">#ffcd00;</span></span><br><span class="line">    cursor:default;</span><br><span class="line">    width: 300px;</span><br><span class="line">    height: 300px;</span><br><span class="line">    border-radius: 50%;</span><br><span class="line">    display: flex;</span><br><span class="line">    justify-content: center;</span><br><span class="line">    align-items: center;</span><br><span class="line">   </span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#app::before &#123;</span></span><br><span class="line">    content:<span class="string">&#x27;&#x27;</span>;</span><br><span class="line">    position: absolute;</span><br><span class="line">    width: 150px;</span><br><span class="line">    height:70px;</span><br><span class="line">    background: <span class="comment">#b57700;</span></span><br><span class="line">    top: 180px;</span><br><span class="line">    border-bottom-left-radius: 70px;</span><br><span class="line">    border-bottom-right-radius: 60px;</span><br><span class="line">    transition: 0.5s;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">#app:hover::before &#123;</span></span><br><span class="line">    top: 210px;</span><br><span class="line">    width: 150px;</span><br><span class="line">    height: 20px;</span><br><span class="line">    background: <span class="comment">#b57700;</span></span><br><span class="line">    border-bottom-left-radius: 0px;</span><br><span class="line">    border-bottom-right-radius: 0px;</span><br><span class="line">&#125;</span><br><span class="line">.eyes&#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    top: -40px;</span><br><span class="line">    display: flex;</span><br><span class="line">&#125;</span><br><span class="line">.eyes .eye&#123;</span><br><span class="line">    position: relative;</span><br><span class="line">    width: 80px;</span><br><span class="line">    display: block;</span><br><span class="line">    height: 80px;</span><br><span class="line">    background: <span class="comment">#fff;</span></span><br><span class="line">    margin: 0 15px;</span><br><span class="line">    border-radius: 50%;</span><br><span class="line">&#125;</span><br><span class="line">.eyes .eye::before&#123;</span><br><span class="line">    content: <span class="string">&quot;&quot;</span>;</span><br><span class="line">    position: absolute;</span><br><span class="line">    width: 40px;</span><br><span class="line">    height: 40px;</span><br><span class="line">    background: <span class="comment">#333;</span></span><br><span class="line">    border-radius: 50%;</span><br><span class="line">    top: 50%;</span><br><span class="line">    left: 25px;</span><br><span class="line">    transform: translate(-50%,-50%);</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2022/09/12/css%E5%88%B6%E4%BD%9C%E7%9A%84%E8%A1%A8%E6%83%85/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-月饼" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
